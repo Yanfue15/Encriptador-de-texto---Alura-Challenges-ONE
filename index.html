@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de texto - Alura Challenges ONE</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+
+    <nav class="logo">
+        <img src="./Imagenes/Logo.png" alt="Logo" class="logo-img">
+    </nav>
+    
+    
+
+    <section class="fondo-imagen"></section>
+    
+    <div class="main-container">
+        <section class="contenedor">
+            <section class="contenido">
+                <input type="text" id="texto" placeholder="Ingrese el texto aquí">
+            </section>
+
+            <section class="texto-aclaracion">
+                <p>Solo letras minúsculas y sin acentos.</p>
+                <img src="./Imagenes/error.png" alt="circulo" class="circulo-img">
+            </section>
+
+            <section class="botones">
+                <button class="boton" onclick="encriptar()">Encriptar</button>
+                <button class="boton" onclick="desencriptar()">Desencriptar</button>
+            </section>
+        </section>
+
+        <div class="contenedor-hola">
+            <img src="./Imagenes/triangulo.png" alt="triangulo" id="triangulo-img" class="triangulo-img">
+            <div class="mensaje" id="mensaje">Ningún mensaje fue encontrado</div>
+            <div class="mensaje2" id="mensaje2">Ingresa el texto que desees encriptar o desencriptar.</div>
+            <div id="mensaje-encriptado" class="mensaje-encriptado"></div>
+            <section class="copiar">
+                <button class="copiar">Copiar</button>
+            </section>
+        </div>
+    </div>
+
+    <footer>
+        <section class="pie-de-pagina">Desarrollado por Yanina Fuentes junto a Alura, 2024</section>
+    </footer>
+
+    <script src="./style.js"></script>
+</body>
+</html>

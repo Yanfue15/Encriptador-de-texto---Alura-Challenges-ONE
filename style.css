@@ -1,0 +1,288 @@
+/* Estilos generales */
+
+:root {
+    --color-primario: #000;
+    --color-secundario: #fff;
+    --color-terciario: #333333;
+    --color-cuarto: #0056b3;
+    
+  }
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Estilos del fondo */
+.fondo-imagen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.5; /* Ajusta la opacidad del fondo */
+    background-image: url(./Imagenes/Fondo.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+/* Estilos del logo */
+.logo {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1;
+}
+
+
+
+/* Contenedor general para centrar los dos contenedores */
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 20px;
+    z-index: 0;
+    width: 70%; /* Ajusta el ancho según sea necesario */
+    box-shadow: 0px 0px 10px var(--color-cuarto);
+}
+
+/* Estilos del contenedor principal */
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-primario);
+    padding: 30px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px); /* Efecto de vidrio */
+    flex: 1; /* Asegura que el contenedor ocupe el mismo espacio que el otro */
+}
+
+/* Estilos del contenido */
+.contenido {
+    margin-top: 20px;
+}
+
+.contenido input {
+    width: 250px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid var(--color-secundario);
+    border-radius: 5px;
+    margin: 15px;
+}
+
+/* Estilos del texto de aclaración */
+.texto-aclaracion {
+    text-align: center;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+}
+
+.texto-aclaracion p {
+    font-size: 14px;
+}
+
+/* Estilos de los botones */
+.botones {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.botones .boton {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: var(--color-terciario);
+    color: var(--color-secundario);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.botones .boton:hover {
+    background-color: var(--color-cuarto);
+}
+
+/* Estilos del botón de copiar */
+.copiar {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.copiar .copiar {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: var(--color-terciario);
+    color:var(--color-secundario);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.copiar .copiar:hover {
+    background-color: var(--color-cuarto);
+}
+
+/* Estilos del pie de página */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--color-terciario);
+    padding: 10px 0;
+    text-align: center;
+    color: var(--color-secundario);
+    font-size: 14px;
+}
+
+/* Estilos del contenedor-hola */
+.contenedor-hola {
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5); /* Fondo negro con transparencia */
+    border-radius: 20px;
+    backdrop-filter: blur(10px); /* Efecto de vidrio */
+    color:var(--color-secundario);
+    text-align: center;
+    flex: 1; /* Asegura que el contenedor ocupe el mismo espacio que el otro */
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+   
+}
+
+.texto-aclaracion .circulo-img {
+    width: 15px;
+    height: 15px;
+    margin: auto;
+}
+
+.contenedor-hola .triangulo-img {
+    width: 45px;
+    height: 45px;
+    margin-bottom: 20px;
+}
+
+.contenedor-hola .mensaje {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.contenedor-hola .mensaje2 {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* Estilos del mensaje encriptado y desencriptado */
+#mensaje-encriptado {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--color-cuarto); 
+    margin-top: 10px;
+}
+
+#mensaje-encriptado.desencriptado {
+    font-size: 16px;
+    font-weight: normal;
+    margin-top: 10px;
+    align-items: center;
+}
+
+/* Estilos del mensaje de guía */
+.mensaje2 {
+    font-size: 14px;
+    color: var(--color-secundario); /* Color gris claro para el texto de guía */
+    margin-top: 10px;
+}
+
+@media (max-width: 1200px) { 
+    .main-container {
+        flex-direction: column; /* Cambia a disposición vertical en dispositivos más pequeños */
+        width: 90%; /* Ajusta el ancho para ocupar más espacio en pantallas más pequeñas */
+    }
+
+    .contenedor, .contenedor-hola {
+        width: 100%; /* Ocupa todo el ancho disponible */
+        padding: 20px; /* Ajusta el padding según sea necesario */
+        text-align: center; /* Centra el contenido en dispositivos pequeños */
+        font-size: 18px;
+    }
+
+    .contenido input {
+        width: 90%; /* Ocupa el 90% del ancho disponible */
+        max-width: 100%; /* Establece un ancho máximo del 100% para que ocupe todo el contenedor */
+        font-size: 18px;
+    }
+
+    .botones {
+        flex-direction: column; /* Acomoda los botones en columna */
+        align-items: center; /* Centra los botones */
+        font-size: 18px;
+    }
+
+    .botones .boton {
+        width: 100%; /* Ocupa todo el ancho disponible */
+        margin-bottom: 10px; /* Espacio entre los botones */
+    }
+
+    .copiar {
+        margin-top: 20px; /* Espacio superior para el botón de copiar */
+    }
+
+    .mensaje, .mensaje2 {
+        font-size: 20px; /* Tamaño de fuente adecuado para dispositivos pequeños */
+    }
+}
+
+@media (max-width: 768px) { 
+    .main-container {
+        width: 100%; /* Ocupa todo el ancho disponible */
+        padding: 10px; /* Ajusta el padding según sea necesario */
+    }
+
+    .contenedor, .contenedor-hola {
+        width: 100%; /* Ocupa todo el ancho disponible */
+        padding: 10px; /* Ajusta el padding según sea necesario */
+    }
+
+    .contenido input {
+        width: 100%; /* Ocupa todo el ancho disponible */
+        max-width: 100%; /* Establece un ancho máximo del 100% para que ocupe todo el contenedor */
+    }
+
+    .botones .boton {
+        width: 100%; /* Ocupa todo el ancho disponible */
+        margin-bottom: 10px; /* Espacio entre los botones */
+    }
+
+    .copiar {
+        margin-top: 20px; /* Espacio superior para el botón de copiar */
+    }
+
+    .mensaje, .mensaje2 {
+        font-size: 14px; /* Tamaño de fuente más pequeño para dispositivos muy pequeños */
+    }
+}
